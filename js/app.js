@@ -17,15 +17,14 @@ function createGrid(numSquares) {
   let opacity = 0.1;
   squares.forEach((square) => {
     square.addEventListener("mouseover", () => {
-        const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-        square.style.opacity = opacity;
-        console.log(opacity);
-        if (opacity < 1){
-            opacity = opacity + 0.1;
-        } else {
-            opacity = 1;
-        }
-        square.style.backgroundColor = randomColor;
+      const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+      square.style.opacity = opacity;
+      if (opacity < 1) {
+        opacity = opacity + 0.1;
+      } else {
+        opacity = 1;
+      }
+      square.style.backgroundColor = randomColor;
     });
   });
 }

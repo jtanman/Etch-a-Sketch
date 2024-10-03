@@ -1,33 +1,32 @@
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 button {
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 24px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 24px;
 }
 
 .grid {
-    display: flex;
-    width: 960px;
-    height: 960px;
-    flex-direction: column;
-    margin: 0 auto;
-    border: 5px solid black;
+  display: flex;
+  width: 960px;
+  height: 960px;
+  flex-direction: column;
+  margin: 0 auto;
+  border: 5px solid black;
 }
 
 .row {
-    display: flex;
-    justify-content: center;
-    flex: 1 1;
+  display: flex;
+  justify-content: center;
+  flex: 1 1;
 }
 
 .square {
-    min-width: 5px;
-    min-height: 5px;
-    background-color: lightgrey;
-    border: 1px solid white;
-    flex: 1 1;
+  min-width: 5px;
+  min-height: 5px;
+  background-color: lightgrey;
+  border: 1px solid white;
+  flex: 1 1;
 }
-
