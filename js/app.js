@@ -10,7 +10,24 @@ function createGrid(numSquares) {
     const row = createRow(numSquares);
     grid.appendChild(row);
   }
+
   container.appendChild(grid);
+
+  const squares = document.querySelectorAll(".square");
+  let opacity = 0.1;
+  squares.forEach((square) => {
+    square.addEventListener("mouseover", () => {
+        const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+        square.style.opacity = opacity;
+        console.log(opacity);
+        if (opacity < 1){
+            opacity = opacity + 0.1;
+        } else {
+            opacity = 1;
+        }
+        square.style.backgroundColor = randomColor;
+    });
+  });
 }
 
 function createRow(numSquares) {
@@ -28,6 +45,10 @@ button.addEventListener("click", () => {
   const grid = document.querySelector(".grid");
   container.removeChild(grid);
   numSquares = prompt("Enter the number of squares per side:");
+  if (numSquares > 100) {
+    numSquares = 100;
+    alert("Maximum number of squares per side is 100.");
+  }
   createGrid(numSquares);
 });
 
